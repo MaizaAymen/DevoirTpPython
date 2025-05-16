@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Database configuration
-DATABASE_URL = "sqlite:///./movies.db"
-db_type = "sqlite"  # Adding the db_type variable that was missing
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/movies_db
+ # Adding the db_type variable that was missing
 
 # Create the SQLAlchemy engine
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
