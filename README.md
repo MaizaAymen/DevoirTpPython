@@ -10,7 +10,7 @@ A full-stack application that allows users to explore movies, view details, and 
 
 ## Project Structure
 
-- **Backend**: FastAPI API with SQLAlchemy and SQLite
+- **Backend**: FastAPI API with postgres
 - **Frontend**: Streamlit web interface
 - **AI Integration**: Groq LLM for generating movie summaries
 
@@ -32,8 +32,9 @@ pip install -r requirements.txt
 Create or update the `.env` file in the project root:
 
 ```
-# Database configuration - SQLite used by default
-DATABASE_URL=sqlite:///./movies.db
+# Database configuration - postgres used by default
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/movies_db
+
 
 # Groq API Key
 GROQ_API_KEY=your_groq_api_key_here
